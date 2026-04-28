@@ -6,84 +6,154 @@
   <title>Portfolio Saya</title>
 
   <style>
+    :root {
+      --primary: #8b5cf6;
+      --primary-light: #a78bfa;
+      --accent: #bb5dfa;
+      --bg: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --glass: rgba(255, 255, 255, 0.8);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     body {
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
+      background-color: var(--bg);
+      background: linear-gradient(135deg, #d287fd 0%, #764ba2 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(135deg, #bb5dfa, #8b5cf6);
+      background: transparent;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 80px 20px;
+      backdrop-filter: blur(5px);
     }
 
     header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #ddd6fe, #f5f3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     header p {
-      font-size: 18px;
+      font-size: 1.1rem;
+      color: #ddd6fe;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
     }
 
     .container {
       width: 90%;
-      max-width: 1000px;
-      margin: 30px auto;
+      max-width: 900px;
+      margin: -40px auto 50px;
     }
 
     section {
-      background: white;
-      margin-bottom: 20px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin-bottom: 25px;
+      padding: 40px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-      margin-bottom: 15px;
-      color: linear-gradient(135deg, #bb5dfa, #8b5cf6);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+    }
+
+    h2::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 10px;
     }
 
     ul {
-      padding-left: 20px;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      color: var(--text-muted);
+    }
+
+    ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .social {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .social a {
-      display: inline-block;
-      margin-right: 10px;
       text-decoration: none;
       color: white;
-      background: linear-gradient(135deg, #bb5dfa, #8b5cf6);
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-top: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+    }
+
+    .social a:hover {
+      filter: brightness(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: linear-gradient(135deg, #bb5dfa, #8b5cf6);
-      color: white;
-      margin-top: 30px;
+      padding: 40px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
+      header h1 { font-size: 2.2rem; }
+      section { padding: 25px; }
+      .container { margin-top: -20px; }
     }
   </style>
-  
+
 </head>
 <body>
 
