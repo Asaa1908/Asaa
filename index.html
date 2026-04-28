@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Saya</title>
+
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --primary-light: #a78bfa;
+      --accent: #bb5dfa;
+      --bg: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --glass: rgba(255, 255, 255, 0.8);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background: linear-gradient(135deg, #d287fd 0%, #764ba2 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    header {
+      background: transparent;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #ddd6fe, #f5f3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ddd6fe;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: -40px auto 50px;
+    }
+
+    section {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin-bottom: 25px;
+      padding: 40px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+    }
+
+    h2::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      color: var(--text-muted);
+    }
+
+    ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .social {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .social a {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+    }
+
+    .social a:hover {
+      filter: brightness(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 25px; }
+      .container { margin-top: -20px; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>Hasanun Nisa</h1>
+    <p>Mahasiswa | Web Developer | UI Designer</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Tentang Saya</h2>
+      <p>
+        Halo, saya adalah mahasiswa yang tertarik pada dunia teknologi dan pengembangan web.
+        Saya suka membuat desain dan aplikasi yang menarik.
+      </p>
+    </section>
+
+    <section>
+      <h2>Informasi Pribadi</h2>
+      <p><strong>Nama:</strong> Hasanun Nisa</p>
+      <p><strong>Email:</strong> asaaaaa1908@gmail.com</p>
+      <p><strong>Alamat:</strong> Dabo Singkep</p>
+
+      <div class="social">
+        <a href="https://github.com/Asaa1908">GitHub</a>
+        <a href="https://www.linkedin.com/in/hasanun-nisa-35a311394">LinkedIn</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Riwayat Pendidikan</h2>
+      <ul>
+        <li>Politeknik Negeri Batam - Teknik Informatika (2025 - Sekarang)</li>
+        <li>MAS Al-Barakah Singkep (2022 - 2025)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Riwayat Project</h2>
+      <ul>
+        <li>Aplikasi CLEARN (Tahap pengembangan)</li>
+        <li>Website Portfolio</li>
+        <li>Aplikasi TREE</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skill</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Figma</li>
+        <li>UI/UX Design</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Portfolio Saya</p>
+  </footer>
+
+</body>
+</html>
+
